@@ -1,8 +1,6 @@
 # Task Scheduler
 
-Softapalikat:
-- Backend = Python + FastAPI + OR-Tools optimoinnille
-- Frontend = HTML + CSS + JavaScript + Bootstrap + Chart.js
+<img width="1895" height="819" alt="image" src="https://github.com/user-attachments/assets/e39f2c39-15ad-49dd-a3e2-70543b93cb79" />
 
 ## Yleiskuva
 
@@ -10,6 +8,9 @@ Tämä projekti koostuu backendistä ja frontendistä.
 
 - Backend laskee optimoidun aikataulun käyttämällä Google OR-Tools CP-SAT -ratkaisijaa.
 - Frontend näyttää tehtävät, koneet ja aikataulun selaimessa.
+
+- Backend = Python + FastAPI + OR-Tools optimoinnille
+- Frontend = HTML + CSS + JavaScript + Bootstrap + Chart.js
 
 ## Miten se toimii
 
