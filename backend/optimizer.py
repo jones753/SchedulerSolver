@@ -2,8 +2,8 @@ from typing import Any
 
 from ortools.sat.python import cp_model
 
-#from .models import Task
-from models import Task
+from .models import Task
+#from models import Task
 
 
 def optimize_tasks(tasks: list[Task]) -> dict[str, Any]:
