@@ -47,6 +47,7 @@ http://127.0.0.1:8001/frontend/index.html
 ```
 
 5. Frontendissä voit klikata `Generate Sample Data` tai ladata oman JSON-tiedoston ja painaa `Optimize`.
+   - Voit myös muokata `Quantity` ja `Dependencies` arvoja suoraan frontendissä. Dependencies kohtaan syötetään `task_id`.
 
 ## API
 
