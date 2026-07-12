@@ -46,7 +46,7 @@ python3 -m http.server 8001
 http://127.0.0.1:8001/frontend/index.html
 ```
 
-5. Frontendissä voit klikata `Generate Sample Data`, ladata oman JSON-tiedoston ja painaa `Optimize`.
+5. Frontendissä voit klikata `Generate Sample Data` tai ladata oman JSON-tiedoston ja painaa `Optimize`.
 
 ## API
 
