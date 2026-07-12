@@ -1,0 +1,72 @@
+[
+  {
+    "id": "S1",
+    "name": "Frame welding",
+    "quantity": 10,
+    "time_per_item": 3,
+    "priority": 4,
+    "possible_machines": ["Machine A", "Machine B", "Machine C"]
+  },
+  {
+    "id": "S2",
+    "name": "Panel cutting",
+    "quantity": 8,
+    "time_per_item": 4,
+    "priority": 3,
+    "possible_machines": ["Machine A", "Machine B", "Machine C"]
+  },
+  {
+    "id": "S3",
+    "name": "Edge grinding",
+    "quantity": 12,
+    "time_per_item": 2,
+    "priority": 2,
+    "possible_machines": ["Machine A", "Machine B", "Machine C"],
+    "dependencies": ["S2"]
+  },
+  {
+    "id": "S4",
+    "name": "Paint spraying",
+    "quantity": 6,
+    "time_per_item": 5,
+    "priority": 5,
+    "possible_machines": ["Machine A", "Machine B", "Machine C"],
+    "dependencies": ["S1"]
+  },
+  {
+    "id": "S5",
+    "name": "Inspection",
+    "quantity": 14,
+    "time_per_item": 1,
+    "priority": 4,
+    "possible_machines": ["Machine A", "Machine B", "Machine C"],
+    "dependencies": ["S3"]
+  },
+  {
+    "id": "S6",
+    "name": "Assembly",
+    "quantity": 9,
+    "time_per_item": 3,
+    "priority": 3,
+    "possible_machines": ["Machine A", "Machine B", "Machine C"],
+    "dependencies": ["S5"]
+  },
+  {
+    "id": "S7",
+    "name": "Label printing",
+    "quantity": 20,
+    "time_per_item": 1,
+    "priority": 2,
+    "possible_machines": ["Machine A", "Machine B", "Machine C"],
+    "dependencies": ["S6"]
+  },
+  {
+    "id": "S8",
+    "name": "Final packaging",
+    "quantity": 7,
+    "time_per_item": 4,
+    "priority": 4,
+    "possible_machines": ["Machine A", "Machine B", "Machine C"],
+    "dependencies": ["S4", "S7"]
+  }
+]

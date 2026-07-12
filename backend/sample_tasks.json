@@ -1,0 +1,252 @@
+[
+  {
+    "id": "T1",
+    "name": "Robot weld assembly",
+    "quantity": 18,
+    "time_per_item": 3,
+    "priority": 4,
+    "machine": "Robot 1"
+  },
+  {
+    "id": "T2",
+    "name": "Panel cutting",
+    "quantity": 24,
+    "time_per_item": 2,
+    "priority": 3,
+    "machine": "Laser Cutter"
+  },
+  {
+    "id": "T3",
+    "name": "Edge deburring",
+    "quantity": 16,
+    "time_per_item": 2,
+    "priority": 2,
+    "machine": "Robot 2"
+  },
+  {
+    "id": "T4",
+    "name": "Surface polishing",
+    "quantity": 14,
+    "time_per_item": 4,
+    "priority": 3,
+    "machine": "Robot 3"
+  },
+  {
+    "id": "T5",
+    "name": "Laser engraving",
+    "quantity": 12,
+    "time_per_item": 2,
+    "priority": 5,
+    "machine": "Laser Cutter"
+  },
+  {
+    "id": "T6",
+    "name": "Component inspection",
+    "quantity": 20,
+    "time_per_item": 1,
+    "priority": 5,
+    "machine": "Inspection"
+  },
+  {
+    "id": "T7",
+    "name": "Final packaging",
+    "quantity": 30,
+    "time_per_item": 1,
+    "priority": 4,
+    "machine": "Packaging"
+  },
+  {
+    "id": "T8",
+    "name": "Bracket fastening",
+    "quantity": 22,
+    "time_per_item": 3,
+    "priority": 3,
+    "machine": "Robot 1",
+    "dependencies": ["T1"]
+  },
+  {
+    "id": "T9",
+    "name": "Precision drilling",
+    "quantity": 15,
+    "time_per_item": 3,
+    "priority": 2,
+    "machine": "Robot 2"
+  },
+  {
+    "id": "T10",
+    "name": "Sealant application",
+    "quantity": 19,
+    "time_per_item": 2,
+    "priority": 4,
+    "machine": "Robot 3",
+    "dependencies": ["T4"]
+  },
+  {
+    "id": "T11",
+    "name": "Barcode labeling",
+    "quantity": 28,
+    "time_per_item": 1,
+    "priority": 3,
+    "machine": "Packaging"
+  },
+  {
+    "id": "T12",
+    "name": "Dimensional check",
+    "quantity": 17,
+    "time_per_item": 2,
+    "priority": 5,
+    "machine": "Inspection",
+    "dependencies": ["T6"]
+  },
+  {
+    "id": "T13",
+    "name": "Contour cutting",
+    "quantity": 13,
+    "time_per_item": 3,
+    "priority": 2,
+    "machine": "Laser Cutter"
+  },
+  {
+    "id": "T14",
+    "name": "Part sorting",
+    "quantity": 21,
+    "time_per_item": 2,
+    "priority": 3,
+    "machine": "Robot 1",
+    "dependencies": ["T8"]
+  },
+  {
+    "id": "T15",
+    "name": "Screw insertion",
+    "quantity": 25,
+    "time_per_item": 2,
+    "priority": 4,
+    "machine": "Robot 2"
+  },
+  {
+    "id": "T16",
+    "name": "Paint curing",
+    "quantity": 11,
+    "time_per_item": 4,
+    "priority": 2,
+    "machine": "Robot 3"
+  },
+  {
+    "id": "T17",
+    "name": "Heat seal wrapping",
+    "quantity": 26,
+    "time_per_item": 2,
+    "priority": 4,
+    "machine": "Packaging",
+    "dependencies": ["T11"]
+  },
+  {
+    "id": "T18",
+    "name": "Visual defect screening",
+    "quantity": 18,
+    "time_per_item": 1,
+    "priority": 5,
+    "machine": "Inspection",
+    "dependencies": ["T12"]
+  },
+  {
+    "id": "T19",
+    "name": "Sheet metal shaping",
+    "quantity": 10,
+    "time_per_item": 4,
+    "priority": 3,
+    "machine": "Laser Cutter"
+  },
+  {
+    "id": "T20",
+    "name": "Cable harness assembly",
+    "quantity": 16,
+    "time_per_item": 3,
+    "priority": 4,
+    "machine": "Robot 1",
+    "dependencies": ["T14"]
+  },
+  {
+    "id": "T21",
+    "name": "Torque tightening",
+    "quantity": 23,
+    "time_per_item": 2,
+    "priority": 3,
+    "machine": "Robot 2"
+  },
+  {
+    "id": "T22",
+    "name": "Surface coating",
+    "quantity": 15,
+    "time_per_item": 3,
+    "priority": 2,
+    "machine": "Robot 3"
+  },
+  {
+    "id": "T23",
+    "name": "Carton packing",
+    "quantity": 27,
+    "time_per_item": 1,
+    "priority": 4,
+    "machine": "Packaging",
+    "dependencies": ["T7"]
+  },
+  {
+    "id": "T24",
+    "name": "Functional test",
+    "quantity": 19,
+    "time_per_item": 2,
+    "priority": 5,
+    "machine": "Inspection",
+    "dependencies": ["T12"]
+  },
+  {
+    "id": "T25",
+    "name": "Micro-drill routing",
+    "quantity": 14,
+    "time_per_item": 3,
+    "priority": 2,
+    "machine": "Laser Cutter"
+  },
+  {
+    "id": "T26",
+    "name": "Weld seam finishing",
+    "quantity": 12,
+    "time_per_item": 3,
+    "priority": 3,
+    "machine": "Robot 1",
+    "dependencies": ["T1"]
+  },
+  {
+    "id": "T27",
+    "name": "Sensor fitting",
+    "quantity": 20,
+    "time_per_item": 2,
+    "priority": 4,
+    "machine": "Robot 2"
+  },
+  {
+    "id": "T28",
+    "name": "Protective film application",
+    "quantity": 13,
+    "time_per_item": 2,
+    "priority": 3,
+    "machine": "Robot 3"
+  },
+  {
+    "id": "T29",
+    "name": "Palletizing",
+    "quantity": 24,
+    "time_per_item": 1,
+    "priority": 4,
+    "machine": "Packaging"
+  },
+  {
+    "id": "T30",
+    "name": "End-of-line audit",
+    "quantity": 22,
+    "time_per_item": 2,
+    "priority": 5,
+    "machine": "Inspection"
+  }
+]

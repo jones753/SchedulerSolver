@@ -1,0 +1,84 @@
+Softapalikat:
+Backend = Python + FastAPI + OR-Tools optimoinnille
+Frontend = HTML + CSS + JavaScript + Bootstrap + Chart.js
+
+Summasummarum miten tämä pelittää:
+
+1. käytetään Google or kirjaston CP SAT solveria aikataulujen optimointiin.
+    - Tällä mallilla saadaan aikataulutettua jokainen taskit ja koneet siten että työ tehdään mahdollisimman lyhyessä ajassa. 
+
+2. optimizer:
+    - Aluksi rakennetaan optio muuttujat joita malli tarvitsee laskeakseen tuloksen. 
+    - Jokaiselle taskille ja mahdolliselle koneelle luodaan:
+
+        Start time (IntVar) – milloin tehtävä alkaa
+        End time (IntVar) – milloin tehtävä päättyy
+        Assignment (BoolVar) – suoritetaanko tehtävä tällä koneella
+        Interval (IntervalVar) – tehtävän aikajakso kyseisellä koneella
+    
+    Eli luodaan struct joka näyttää esim. tältä:
+
+    task_vars
+
+        T1
+        ├── task_start
+        ├── task_end
+        ├── machine_start
+        │      M1 -> IntVar
+        │      M2 -> IntVar
+        ├── machine_end
+        │      M1 -> IntVar
+        │      M2 -> IntVar
+        ├── machine_assignment
+        │      M1 -> BoolVar
+        │      M2 -> BoolVar
+        └── machine_interval
+            M1 -> IntervalVar
+            M2 -> IntervalVar
+
+
+        T2
+        ├── task_start
+        ├── task_end
+        ├── machine_start
+        │      M1 -> IntVar
+        │      M2 -> IntVar
+        ├── machine_end
+        │      M1 -> IntVar
+        │      M2 -> IntVar
+        ├── machine_assignment
+        │      M1 -> BoolVar
+        │      M2 -> BoolVar
+        └── machine_interval
+            M1 -> IntervalVar
+            M2 -> IntervalVar
+
+        (Tässä vaiheessa millään muuttujalla ei vielä ole arvoa. Solver päättää niiden arvot myöhemmin.)
+
+    - Sitten luodaan ns. säännöt mallille. Eli no overlapping, depencies,
+       each task must run allowed machines only etc etc...
+
+    - Lopuksi määritellään tavoitefunktio -> Minimize makespan
+
+    - Kun kaikki muuttujat ja rajoitteet on määritelty, kutsutaan:
+        solver.Solve(model)
+
+    - Solver käy läpi valtavan määrän mahdollisia aikatauluja ja etsii sellaisen, joka:
+
+        täyttää kaikki rajoitteet
+        minimoi makespanin
+
+    - Lopuksi luetaan solverin löytämät arvot (start_time, finish_time, assigned_machine) ja palautetaan ne käyttöliittymälle.
+
+
+ELI 
+Koko prosessi on:
+
+Rakennetaan optimointimalli (decision variables).
+Lisätään tuotannon rajoitteet (constraints).
+Määritellään tavoitefunktio (minimize makespan).
+Solver ratkaisee mallin.
+Luetaan ratkaisu ja näytetään aikataulu käyttäjälle.
+
+Hox!
+Priority arvoja ei tässä aikataulutuksessa oteta huomioon ollenkaan

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "M1",
+    "name": "Robot weld assembly",
+    "quantity": 18,
+    "time_per_item": 3,
+    "priority": 4,
+    "possible_machines": ["Robot 1", "Robot 2"]
+  },
+  {
+    "id": "M2",
+    "name": "Panel cutting",
+    "quantity": 24,
+    "time_per_item": 2,
+    "priority": 3,
+    "possible_machines": ["Laser Cutter", "Waterjet"]
+  },
+  {
+    "id": "M3",
+    "name": "Edge deburring",
+    "quantity": 16,
+    "time_per_item": 2,
+    "priority": 2,
+    "possible_machines": ["Robot 2", "Manual Station"]
+  },
+  {
+    "id": "M4",
+    "name": "Surface polishing",
+    "quantity": 14,
+    "time_per_item": 4,
+    "priority": 3,
+    "possible_machines": ["Robot 3"]
+  },
+  {
+    "id": "M5",
+    "name": "Laser engraving",
+    "quantity": 12,
+    "time_per_item": 2,
+    "priority": 5,
+    "possible_machines": ["Laser Cutter", "Engraver"]
+  },
+  {
+    "id": "M6",
+    "name": "Component inspection",
+    "quantity": 20,
+    "time_per_item": 1,
+    "priority": 5,
+    "possible_machines": ["Inspection", "Vision Station"]
+  },
+  {
+    "id": "M7",
+    "name": "Bracket fastening",
+    "quantity": 22,
+    "time_per_item": 3,
+    "priority": 3,
+    "possible_machines": ["Robot 1", "Robot 2"],
+    "dependencies": ["M1"]
+  },
+  {
+    "id": "M8",
+    "name": "Final packaging",
+    "quantity": 30,
+    "time_per_item": 1,
+    "priority": 4,
+    "possible_machines": ["Packaging"]
+  }
+]

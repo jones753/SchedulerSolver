@@ -1,0 +1,53 @@
+[
+  {
+    "id": "S1",
+    "name": "Weld subassembly",
+    "quantity": 10,
+    "time_per_item": 2,
+    "priority": 4,
+    "possible_machines": ["Robot A", "Robot B"]
+  },
+  {
+    "id": "S2",
+    "name": "Panel cut",
+    "quantity": 8,
+    "time_per_item": 3,
+    "priority": 3,
+    "machine": "Laser"
+  },
+  {
+    "id": "S3",
+    "name": "Deburr edges",
+    "quantity": 6,
+    "time_per_item": 2,
+    "priority": 2,
+    "possible_machines": ["Robot B"],
+    "dependencies": ["S1"]
+  },
+  {
+    "id": "S4",
+    "name": "Polish finish",
+    "quantity": 5,
+    "time_per_item": 4,
+    "priority": 3,
+    "machine": "Polisher"
+  },
+  {
+    "id": "S5",
+    "name": "Quality inspect",
+    "quantity": 9,
+    "time_per_item": 1,
+    "priority": 5,
+    "possible_machines": ["Inspection", "Vision Station"],
+    "dependencies": ["S3"]
+  },
+  {
+    "id": "S6",
+    "name": "Pack",
+    "quantity": 12,
+    "time_per_item": 1,
+    "priority": 4,
+    "machine": "Packaging",
+    "dependencies": ["S5"]
+  }
+]

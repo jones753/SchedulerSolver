@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manufacturing Scheduler</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <nav class="topbar navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <span class="navbar-brand">Production Scheduler</span>
+          <div class="topbar-meta d-flex gap-4">
+            <span>Factory Status: <strong>Online</strong></span>
+            <span>Current Makespan: <strong id="currentMakespan">--</strong></span>
+          </div>
+        </div>
+      </nav>
+
+      <main class="container-fluid py-4">
+        <div class="row g-4 mb-4">
+          <div class="col-lg-8">
+            <div class="panel p-4 h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                  <h2 class="panel-title mb-1">Production Plan</h2>
+                  <p class="subtle-text mb-0">Manufacturing execution schedule</p>
+                </div>
+                <div class="d-flex gap-2">
+                  <button id="importJsonBtn" class="btn btn-outline-light">Import JSON</button>
+                  <button id="optimizeBtn" class="btn btn-primary">Optimize</button>
+                  <button id="sampleDataBtn" class="btn btn-secondary">Generate Sample Data</button>
+                </div>
+              </div>
+
+              <div class="table-responsive">
+                <table class="table align-middle">
+                  <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Task</th>
+                      <th>Quantity</th>
+                      <th>Dependencies</th>
+                      <th>Machine</th>
+                      <th>Duration</th>
+                      <th>Priority</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tasksTableBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="row g-3">
+              <div class="col-6 col-lg-12">
+                <div class="kpi-card">
+                  <div class="kpi-label">Total Tasks</div>
+                  <div id="totalTasks" class="kpi-value">0</div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-12">
+                <div class="kpi-card">
+                  <div class="kpi-label">Machines</div>
+                  <div id="machinesCount" class="kpi-value">0</div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-12">
+                <div class="kpi-card">
+                  <div class="kpi-label">Makespan</div>
+                  <div id="makespanValue" class="kpi-value">0</div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-12">
+                <div class="kpi-card">
+                  <div class="kpi-label">Machine Utilization</div>
+                  <div id="utilizationValue" class="kpi-value">0%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel p-4 mb-4">
+          <h3 class="panel-title mb-3">Interactive Gantt Chart</h3>
+          <div id="gantt"></div>
+        </div>
+
+        <div class="panel p-4">
+          <h3 class="panel-title mb-3">Machine Utilization</h3>
+          <canvas id="utilizationChart"></canvas>
+        </div>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

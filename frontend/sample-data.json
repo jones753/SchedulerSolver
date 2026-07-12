@@ -1,0 +1,42 @@
+[
+  {
+    "id": "T1",
+    "name": "CNC Milling",
+    "quantity": 6,
+    "time_per_item": 2,
+    "machine": "M1",
+    "priority": 3
+  },
+  {
+    "id": "T2",
+    "name": "Drilling",
+    "quantity": 4,
+    "time_per_item": 3,
+    "machine": "M1",
+    "priority": 2
+  },
+  {
+    "id": "T3",
+    "name": "Assembly",
+    "quantity": 5,
+    "time_per_item": 2,
+    "machine": "M2",
+    "priority": 4
+  },
+  {
+    "id": "T4",
+    "name": "Inspection",
+    "quantity": 3,
+    "time_per_item": 2,
+    "machine": "M2",
+    "priority": 5
+  },
+  {
+    "id": "T5",
+    "name": "Painting",
+    "quantity": 7,
+    "time_per_item": 1,
+    "machine": "M3",
+    "priority": 1
+  }
+]

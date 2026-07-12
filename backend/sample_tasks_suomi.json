@@ -1,0 +1,62 @@
+[
+  {
+    "id": "TASK-001",
+    "name": "Akselien sorvaus erä 1",
+    "quantity": 50,
+    "time_per_item": 2,
+    "machine": "CNC-1",
+    "possible_machines": [],
+    "priority": 3,
+    "dependencies": []
+  },
+  {
+    "id": "TASK-002",
+    "name": "Runkojen jyrsintä",
+    "quantity": 20,
+    "time_per_item": 6,
+    "machine": "CNC-2",
+    "possible_machines": [],
+    "priority": 4,
+    "dependencies": []
+  },
+  {
+    "id": "TASK-003",
+    "name": "Akselien sorvaus erä 2 (Kiireellinen)",
+    "quantity": 30,
+    "time_per_item": 3,
+    "machine": null,
+    "possible_machines": ["CNC-1", "CNC-2"],
+    "priority": 5,
+    "dependencies": []
+  },
+  {
+    "id": "TASK-004",
+    "name": "Komponenttien loppukasaus",
+    "quantity": 10,
+    "time_per_item": 15,
+    "machine": "Kasaus-1",
+    "possible_machines": [],
+    "priority": 2,
+    "dependencies": ["TASK-001", "TASK-002"]
+  },
+  {
+    "id": "TASK-005",
+    "name": "Laadunvalvonta ja pakkaus",
+    "quantity": 10,
+    "time_per_item": 4,
+    "machine": "Kasaus-1",
+    "possible_machines": [],
+    "priority": 1,
+    "dependencies": ["TASK-004"]
+  },
+  {
+    "id": "TASK-006",
+    "name": "Varaterien huoltoajo",
+    "quantity": 1,
+    "time_per_item": 45,
+    "machine": null,
+    "possible_machines": ["CNC-1", "CNC-2"],
+    "priority": 1,
+    "dependencies": []
+  }
+]
